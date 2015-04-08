@@ -8,15 +8,22 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
-
+@interface AppDelegate ()<UITabBarControllerDelegate>
+@property (nonatomic ,strong)UITabBarController *tabVC;
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+//    UIViewController *vc1 = ViewController1.new;
+//    UIViewController *vc2 = ViewController2.new;
+//    
+//    self.tabVC = UITabBarController.new;
+//    self.tabVC.viewControllers = @[vc1,vc2];
+//    self.tabVC.delegate = self;
+//    self.window.rootViewController = self.tabVC;
     return YES;
 }
 
@@ -40,6 +47,15 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark tabbarcontroller delegate
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    CATransition *transition = [CATransition animation];
+    transition.type = kCATransitionFade;
+    transition.duration = 4.0;
+    [tabBarController.view.layer addAnimation:transition forKey:nil];
 }
 
 @end

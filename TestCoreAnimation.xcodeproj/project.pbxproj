@@ -414,6 +414,7 @@
 				886EED261AB720E800F6A0CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		886EED271AB720E800F6A0CF /* Build configuration list for PBXNativeTarget "TestCoreAnimationTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +423,7 @@
 				886EED291AB720E800F6A0CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
